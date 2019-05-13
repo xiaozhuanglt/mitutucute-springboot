@@ -25,7 +25,7 @@ spring:
     type: com.zaxxer.hikari.HikariDataSource
 
 server:
-  port: 8080
+  port: 8081
 
 mybatis:
   #注意：一定要对应mapper映射xm

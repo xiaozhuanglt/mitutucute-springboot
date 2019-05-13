@@ -20,13 +20,13 @@ public class DemoController {
     ServiceDemo serviceDemo;
 
     @GetMapping("/queryArea")
-    public int queryArea(Long areaId){
+    public Long queryArea(Long areaId){
         try {
-            int i = serviceDemo.queryArea(areaId);
+            Long i = serviceDemo.queryArea(areaId);
             return i;
         }catch (Exception e){
             System.out.println(e);
-            return -1;
+            return Long.valueOf(-1);
         }
     }
 
