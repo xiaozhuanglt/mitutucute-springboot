@@ -25,8 +25,8 @@ public class ServiceDemoImpl implements ServiceDemo {
      * @Param: [areaId]
      */
     @Override
-    public int queryArea(Long areaId) {
-        int i = demoDao.selectAreaById(areaId);
+    public Long queryArea(Long areaId) {
+        Long i = demoDao.selectAreaById(areaId);
         return i;
     }
 }

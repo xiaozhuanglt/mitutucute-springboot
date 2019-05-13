@@ -41,14 +41,6 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>2.1.4.RELEASE</version>
             </dependency>
-            <dependency>
-                <groupId>mysql</groupId>
-                <artifactId>mysql-connector-java</artifactId>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-            </dependency>
 
             <!--JDBC-->
             <dependency>
@@ -65,13 +57,18 @@
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
                 <version>8.0.16</version>
-                <scope>runtime</scope>
+            </dependency>
+            <dependency>
+                <groupId>tk.mybatis</groupId>
+                <artifactId>mapper-spring-boot-starter</artifactId>
+                <version>2.1.5</version>
             </dependency>
             <!--数据库连接池-->
             <dependency>
                 <groupId>com.zaxxer</groupId>
                 <artifactId>HikariCP</artifactId>
-                <version>2.7.9</version>
+                <version>3.2.0</version>
+                <type>bundle</type>
             </dependency>
             <!--分页-->
             <dependency>
@@ -96,6 +93,11 @@
         <module>web/mitutucute-springboot-web</module>
         <module>biz/mitutucute-springboot-controller</module>
         <module>test/mitutucute-springboot-test</module>
+        <module>biz/mitutucute-springboot-service</module>
+        <module>biz/mitutucute-springboot-model</module>
+        <module>dal/mitutucute-springboot-dao</module>
+        <module>dal/mitutucute-springboot-dal-model</module>
+        <module>tools/mitutucute-springboot-common</module>
     </modules>
 
     <build>

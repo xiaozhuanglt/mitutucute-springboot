@@ -9,5 +9,5 @@ public interface ServiceDemo {
      * @Param: [areaId]
      * @return {@link int}
      */
-    int queryArea(Long areaId);
+    Long queryArea(Long areaId);
 }
