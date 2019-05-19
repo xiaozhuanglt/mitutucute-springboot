@@ -1,0 +1,1 @@
+dubboLogFilter=com.xiaozhuanglt.mitutucute.springboot.web.dubbo.DubboLogFilter

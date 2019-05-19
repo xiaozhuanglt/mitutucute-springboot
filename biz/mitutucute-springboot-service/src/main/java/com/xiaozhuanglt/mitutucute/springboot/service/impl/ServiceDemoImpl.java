@@ -3,8 +3,8 @@ package com.xiaozhuanglt.mitutucute.springboot.service.impl;
 import com.xiaozhuanglt.mitutucue.facade.DemoFacade;
 import com.xiaozhuanglt.mitutucute.springboot.service.interfaces.ServiceDemo;
 import com.xiaozhuanglt.mitutucute.springboot.dao.DemoDao;
+import org.apache.dubbo.config.annotation.Reference;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.annotation.Reference;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.GetMapping;
 

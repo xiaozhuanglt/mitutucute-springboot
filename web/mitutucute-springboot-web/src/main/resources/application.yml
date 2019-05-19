@@ -48,6 +48,7 @@ dubbo:
   application:
     name: dubbo-mitutucute-springboot
     id: dubbo-mitutucute-springboot
+    logger: slf4j
   ## ProtocolConfig
   protocol:
     id: dubbo
@@ -56,12 +57,15 @@ dubbo:
   scan:
     base-packages: com.xiaozhuanglt.mitutucute.springboot.service
   registry:
-    address: 39.108.13.71:2181
+    address: zookeeper://39.108.13.71:2181
 #  provider:
 #    validation: true
   consumer:
     validation: true
     retries: 0
+  provider:
+    filter: dubboLogFilter
+    accesslog: slf4j
 
 
 server:
