@@ -21,11 +21,17 @@
     </properties>
 
     <dependencies>
+        <!--tomcat可以单独配置-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>spring-boot-starter-tomcat</artifactId>-->
+                    <!--<groupId>org.springframework.boot</groupId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
         </dependency>
-
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
@@ -73,6 +79,62 @@
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
+        </dependency>
+
+        <!--dubbo依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-dependencies</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo-dependencies-bom</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-autoconfigure</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>dubbo</artifactId>
+        </dependency>
+        <!-- Spring Context Extras -->
+        <dependency>
+            <groupId>com.alibaba.spring</groupId>
+            <artifactId>spring-context-support</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+        </dependency>
+
+        <!--日志管理-->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <type>bundle</type>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <!--使用@slf4j时需要引入-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--Json工具-->
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib-ext-spring</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
         </dependency>
 
         <!--内部模块依赖-->

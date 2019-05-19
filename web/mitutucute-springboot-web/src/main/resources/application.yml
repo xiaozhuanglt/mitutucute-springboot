@@ -23,9 +23,9 @@ spring:
     password: root
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.zaxxer.hikari.HikariDataSource
+  main:
+    allow-bean-definition-overriding: true
 
-server:
-  port: 8081
 
 mybatis:
   #注意：一定要对应mapper映射xm
@@ -42,3 +42,29 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
+#dubbo
+dubbo:
+  application:
+    name: dubbo-mitutucute-springboot
+    id: dubbo-mitutucute-springboot
+  ## ProtocolConfig
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.xiaozhuanglt.mitutucute.springboot.service
+  registry:
+    address: 39.108.13.71:2181
+#  provider:
+#    validation: true
+  consumer:
+    validation: true
+    retries: 0
+
+
+server:
+  port: 8081
+
+

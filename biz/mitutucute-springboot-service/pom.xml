@@ -55,6 +55,9 @@
             <scope>test</scope>
         </dependency>
 
+        <!--RPC接口-->
+
+
         <!--内部模块依赖-->
         <dependency>
             <groupId>com.xiaozhuanglt</groupId>

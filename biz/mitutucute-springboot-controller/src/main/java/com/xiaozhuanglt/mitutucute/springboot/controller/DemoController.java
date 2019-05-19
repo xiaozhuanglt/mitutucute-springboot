@@ -30,4 +30,15 @@ public class DemoController {
         }
     }
 
+    @GetMapping("consumerDemo")
+    public int queryMitutucueArea(){
+        try {
+            int i = serviceDemo.queryMitutucueArea(Long.valueOf(5));
+            return i;
+        }catch (Exception e){
+            System.out.println(e);
+            return -1;
+        }
+    }
+
 }
