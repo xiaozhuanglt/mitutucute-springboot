@@ -18,7 +18,7 @@ public class ServiceDemoImpl implements ServiceDemo {
 
     @Autowired
     DemoDao demoDao;
-    @Reference
+    @Reference(version = "1.0.0")
     DemoFacade demoFacade;
 
     /**

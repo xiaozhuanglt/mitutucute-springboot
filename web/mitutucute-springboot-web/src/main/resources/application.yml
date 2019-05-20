@@ -63,6 +63,7 @@ dubbo:
   consumer:
     validation: true
     retries: 0
+    simplified: true
   provider:
     filter: dubboLogFilter
     accesslog: slf4j
