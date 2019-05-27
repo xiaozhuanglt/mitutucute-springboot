@@ -161,7 +161,6 @@
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
                 <version>1.2.12</version>
-                <type>bundle</type>
             </dependency>
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -194,7 +193,6 @@
     <modules>
         <module>web/mitutucute-springboot-web</module>
         <module>biz/mitutucute-springboot-controller</module>
-        <module>test/mitutucute-springboot-test</module>
         <module>biz/mitutucute-springboot-service</module>
         <module>biz/mitutucute-springboot-model</module>
         <module>dal/mitutucute-springboot-dao</module>

@@ -21,7 +21,7 @@ public class DefaultView extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         // login页面在 templates 文件夹下
-        registry.addViewController("/templates/").setViewName("index.html");
+        registry.addViewController("/").setViewName("index");
         registry.setOrder(Ordered.HIGHEST_PRECEDENCE);
         super.addViewControllers(registry);
     }
