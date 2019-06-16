@@ -60,12 +60,19 @@ dubbo:
     address: zookeeper://39.108.13.71:2181
     timeout: 10000
     check: false
-#  provider:
+  metadata-report:
+    address: zookeeper://39.108.13.71:2181
+    timeout: 10000
+  config-center:
+    address: zookeeper://39.108.13.71:2181
+    timeout: 10000
+    check: false
+  #  provider:
 #    validation: true
   consumer:
     validation: true
     retries: 0
-    simplified: true
+#    simplified: true
     check: false
   provider:
     filter: dubboLogFilter
