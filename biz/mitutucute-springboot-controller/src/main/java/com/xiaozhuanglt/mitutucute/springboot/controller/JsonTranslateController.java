@@ -2,16 +2,13 @@ package com.xiaozhuanglt.mitutucute.springboot.controller;
 
 import com.xiaozhuanglt.mitutucute.springboot.model.JsonValueByKeyListRO;
 import com.xiaozhuanglt.mitutucute.springboot.service.interfaces.JsonTranslateService;
+import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * @description: json转换
@@ -28,6 +25,9 @@ public class JsonTranslateController {
   @PostMapping("/getValueByKey")
   List<JsonValueByKeyListRO> getValueByKey(String inputJson, String inputKeyWord){
     try {
+      if(StringUtils.isBlank(inputJson) || StringUtils.isBlank(inputKeyWord)){
+        return null;
+      }
 //      局部跨域
 //      response.setHeader("Access-Control-Allow-Origin","*");
       List<JsonValueByKeyListRO> valueByKey = jsonTranslateService.getValueByKey(inputJson, inputKeyWord);
