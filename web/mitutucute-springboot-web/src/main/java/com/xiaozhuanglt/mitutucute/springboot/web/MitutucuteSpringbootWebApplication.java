@@ -12,7 +12,7 @@ import org.springframework.context.annotation.Configuration;
 @ComponentScan(basePackages = {"com.xiaozhuanglt.mitutucute.springboot.service","com.xiaozhuanglt.mitutucute.springboot.controller",
     "com.xiaozhuanglt.mitutucute.springboot.web"})
 @MapperScan(basePackages = "com.xiaozhuanglt.mitutucute.springboot.dao")
-@EnableDubbo(scanBasePackages = {"com.xiaozhuanglt.mitutucute.springboot"})
+//@EnableDubbo(scanBasePackages = {"com.xiaozhuanglt.mitutucute.springboot"})
 public class MitutucuteSpringbootWebApplication {
 
     public static void main(String[] args) {
