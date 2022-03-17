@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
 <mapper namespace="com.xiaozhuanglt.mitutucute.springboot.dao.DemoDao">
 
-    <select id="selectAreaById" resultType="integer">
+    <select id="selectAreaById" resultType="long">
         select id
         from amap_area_book
         where area_id = #{areaId}

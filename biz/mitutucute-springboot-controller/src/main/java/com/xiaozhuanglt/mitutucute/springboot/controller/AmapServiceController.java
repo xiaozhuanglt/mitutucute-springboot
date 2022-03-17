@@ -22,9 +22,9 @@ public class AmapServiceController {
      * @Param: [areaId]
      * @return {@link int}
      */
-    public int queryArea(Long areaId){
+    public Long queryArea(Long areaId){
 
-        int i = serviceDemo.queryArea(areaId);
+        Long i = serviceDemo.queryArea(areaId);
         return i;
     }
 

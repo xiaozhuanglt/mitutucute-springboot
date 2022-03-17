@@ -3,32 +3,38 @@
 #  profiles:
 #    active: dev
 
-server:
-  port: 8080
 
-#公共配置与profiles选择无关
-mybatis:
-  # 注意：对应实体类的路径
-  type-aliases-package: com.xiaozhuanglt.mitutucute.springboot.dal.model
-  #注意：一定要对应mapper映射xml文件的所在路
-  mapper-locations: classpath: mapper/**/*.xml
+#datasource:
+#  hikari:
+#    jdbc-url: jdbc:mysql://localhost:3306/mitutucue?useUnicode=true&characterEncoding=utf-8
+#    username: root
+#    password: root
+#    driver-class-name: com.mysql.jdbc.Driver
+#    read-only: false
+#    connection-timeout: 30000
+#    idle-timeout: 600000
+#    max-lifetime: 180000
+#    maximum-pool-size: 15
 
-
-# 开发配置
 spring:
-  profiles:
-
   datasource:
-    hikari:
-      jdbc-url: jdbc:mysql://localhost:3306/mitutucue?useUnicode=true&characterEncoding=utf-8
-      username: root
-      password: root
-      driver-class-name: com.mysql.jdbc.Driver
-      read-only: false
-      connection-timeout: 30000
-      idle-timeout: 600000
-      max-lifetime: 180000
-      maximum-pool-size: 15
+    url: jdbc:mysql://localhost:3306/mitutucue?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.zaxxer.hikari.HikariDataSource
+  main:
+    allow-bean-definition-overriding: true
+
+
+mybatis:
+  #注意：一定要对应mapper映射xm
+  mapper-locations: classpath:mapper/**/*.xml
+  # 注意：对应实体类的路径zhuanglt.mitutucute.springboot.dal.model
+  type-aliases-package: com.xiaozhuanglt.mitutucute.springboot.dal.model
+  #  config-location: classpath: spring-datasource.xml
+  configuration:
+    map-underscore-to-camel-case: true
 
 #pagehelper分页插件
 pagehelper:
@@ -36,3 +42,46 @@ pagehelper:
   reasonable: true
   supportMethodsArguments: true
   params: count=countSql
+
+#dubbo
+dubbo:
+  application:
+    name: dubbo-mitutucute-springboot
+    id: dubbo-mitutucute-springboot
+    logger: slf4j
+  ## ProtocolConfig
+  protocol:
+    id: dubbo
+    name: dubbo
+    port: 20880
+  scan:
+    base-packages: com.xiaozhuanglt.mitutucute.springboot.service
+  registry:
+    address: zookeeper://39.108.13.71:2181
+    timeout: 10000
+    check: false
+  metadata-report:
+    address: zookeeper://39.108.13.71:2181
+    timeout: 10000
+  config-center:
+    address: zookeeper://39.108.13.71:2181
+    timeout: 10000
+    check: false
+  #  provider:
+#    validation: true
+  consumer:
+    validation: true
+    retries: 0
+#    simplified: true
+    check: false
+  provider:
+    filter: dubboLogFilter
+#    accesslog: slf4j
+
+
+server:
+  port: 8081
+  servlet:
+    context-path: /mitutucue/springboot/
+
+

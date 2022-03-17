@@ -21,7 +21,7 @@ public class TestDemoWeb extends WebBaseTest {
     public void test1(){
         try {
             Long areaId = Long.valueOf(4);
-            int i = serviceDemo.queryArea(areaId);
+            Long i = serviceDemo.queryArea(areaId);
             System.out.println(i);
         }catch (Exception e){
             System.out.println(e);

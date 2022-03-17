@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://code.alibabatech.com/schema/dubbo
+    http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+    ">
+
+    <description>Dubbo Demo Service</description>
+    <!-- 提供方应用信息，用于计算依赖关系 -->
+    <dubbo:application name="dubbo-mitutucute-springboot" />
+
+    <!-- 使用zookeeper注册中心暴露服务地址 -->
+    <dubbo:registry protocol="zookeeper" address="39.108.13.71:2181"
+                    client="zkclient" />
+
+    <!-- dubbo缓存 -->
+    <dubbo:protocol id="dubbo" name="dubbo" port="20880" threadpool="cached" threads="100" />
+
+   <!-- &lt;!&ndash; Greeting服务 -->
+    <!--<bean id="demoFacade" class="com.xiaozhuanglt.mitutucue.facade.facadeimpl.DemoFacadeImpl" />-->
+    <!--<dubbo:service  interface="com.xiaozhuanglt.mitutucue.facade.facade.DemoFacade" ref="demoFacade"  />-->
+
+    <!--&lt;!&ndash; 声明需要暴露的服务接口 &ndash;&gt;-->
+    <!--<dubbo:reference  id="demoFacade" interface="com.xiaozhuanglt.mitutucue.facade.facadeimpl.DemoFacadeImpl" version="1.0.0" timeout="50000" check="false"/>-->
+</beans>
