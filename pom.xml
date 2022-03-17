@@ -15,7 +15,7 @@
     <description>spring-boot项目构建</description>
     <groupId>com.xiaozhuanglt</groupId>
     <artifactId>mitutucute-springboot</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
 <!--
