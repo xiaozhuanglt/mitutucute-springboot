@@ -2,8 +2,8 @@ package com.xiaozhuanglt.mitutucute.springboot.controller;
 
 import com.xiaozhuanglt.mitutucute.springboot.model.JsonValueByKeyListRO;
 import com.xiaozhuanglt.mitutucute.springboot.service.interfaces.JsonTranslateService;
-import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -25,7 +25,7 @@ public class JsonTranslateController {
   @PostMapping("/getValueByKey")
   List<JsonValueByKeyListRO> getValueByKey(String inputJson, String inputKeyWord){
     try {
-      if(StringUtils.isBlank(inputJson) || StringUtils.isBlank(inputKeyWord)){
+      if(StringUtils.isEmpty(inputJson) || StringUtils.isEmpty(inputKeyWord)){
         return null;
       }
 //      局部跨域

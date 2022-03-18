@@ -19,5 +19,4 @@ public class MitutucuteSpringbootWebApplication {
         SpringApplication.run(MitutucuteSpringbootWebApplication.class, args);
     }
 
-
 }
