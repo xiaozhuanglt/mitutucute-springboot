@@ -1,6 +1,10 @@
 package com.xiaozhuanglt.mitutucute.springboot.dal.model.proxy;
 
 
+import util.MonitorUtil;
+
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
@@ -16,12 +20,26 @@ public class Students implements Person {
   }
 
   public static void main(String[] args) {
-    try {
-      Students students = new Students();
-      Person o = (Person) Proxy.newProxyInstance(students.getClass().getClassLoader(), Students.class.getInterfaces(), new JavaPracticeProxy(students));
+      Students target = new Students();
+      /*try {
+      Person o = (Person) Proxy.newProxyInstance(target.getClass().getClassLoader(), Students.class.getInterfaces(), new JavaPracticeProxy(target));
       o.doSomething(110L);
     }catch (Exception e){
       e.printStackTrace();
-    }
+    }*/
+
+    //方式二：
+      Person o = (Person) Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), new InvocationHandler() {
+          @Override
+          public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
+              System.out.printf("开始代理\n");
+              MonitorUtil.start();
+              Object invoke = method.invoke(target, args);
+              MonitorUtil.finish(method.getName());
+              System.out.printf("结束代理\n");
+              return invoke;
+          }
+      });
+      o.doSomething(1233l);
   }
 }
