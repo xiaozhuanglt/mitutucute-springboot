@@ -98,46 +98,6 @@
                 <version>1.2.13</version>
             </dependency>
 
-            <!--&lt;!&ndash;dubbo依赖 2.7以上&ndash;&gt;
-            &lt;!&ndash; Spring Boot &ndash;&gt;
-            <dependency>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.1.5.RELEASE</version>
-                <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-dependencies-bom</artifactId>
-                <version>2.7.1</version>
-                <type>pom</type>
-            </dependency>
-            &lt;!&ndash; Aapche Dubbo  &ndash;&gt;
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo-spring-boot-starter</artifactId>
-                <version>2.7.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.apache.dubbo</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>2.7.1</version>
-            </dependency>
-            &lt;!&ndash;end&ndash;&gt;
-
-            &lt;!&ndash;dubbo7.0版本以下所需依赖，从7.0开始，duboo归为apache项目&ndash;&gt;
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo-dependencies-bom</artifactId>
-                <version>2.6.6</version>
-                <type>pom</type>
-            </dependency>
-            <dependency>
-                <groupId>com.alibaba.boot</groupId>
-                <artifactId>dubbo-spring-boot-autoconfigure</artifactId>
-                <version>0.2.1.RELEASE</version>
-            </dependency>-->
-
             <!-- Dubbo -->
             <dependency>
                 <artifactId>dubbo</artifactId>
@@ -201,14 +161,6 @@
                 <artifactId>fastjson</artifactId>
                 <version>1.2.58</version>
             </dependency>
-
-          <!--  <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring-cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>-->
 
         </dependencies>
     </dependencyManagement>
