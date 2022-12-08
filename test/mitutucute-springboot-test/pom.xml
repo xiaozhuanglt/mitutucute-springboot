@@ -33,7 +33,7 @@
         <dependency>
             <groupId>com.xiaozhuanglt</groupId>
             <artifactId>mitutucute-springboot-web</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
