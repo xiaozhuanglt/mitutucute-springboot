@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.xiaozhuanglt</groupId>
     <artifactId>mitutucute-springboot-service</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>jar</packaging>
     <name>mitutucute-springboot-service</name>
     <description>Demo project for Spring Boot</description>
@@ -79,7 +79,7 @@
         <dependency>
             <groupId>com.xiaozhuanglt</groupId>
             <artifactId>mitutucue-facade</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.0</version>
         </dependency>
         <!--end-->
 
@@ -87,17 +87,20 @@
         <dependency>
             <groupId>com.xiaozhuanglt</groupId>
             <artifactId>mitutucute-springboot-dao</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>1.0.1</version>
         </dependency>
     </dependencies>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.4.2</version>
+                <configuration>
+                    <skipTests>true</skipTests>
+                </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>

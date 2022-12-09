@@ -15,7 +15,7 @@
     <description>spring-boot项目构建</description>
     <groupId>com.xiaozhuanglt</groupId>
     <artifactId>mitutucute-springboot</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1</version>
     <packaging>pom</packaging>
 
 <!--
@@ -160,9 +160,9 @@
             <dependency>
                 <groupId>log4j</groupId>
                 <artifactId>log4j</artifactId>
-                <version>1.2.12</version>
-                <type>bundle</type>
+                <version>1.2.16</version>
             </dependency>
+
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -242,5 +242,26 @@
             </snapshots>
         </repository>
     </repositories>
+
+
+    <profiles>
+        <profile>
+            <id>alimaven</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <repositories>
+                <repository>
+                    <id>alimaven</id>
+                    <url>
+                        ttp://maven.aliyun.com/nexus/content/repositories/central/
+                    </url>
+                    <snapshots>
+                        <enabled>true</enabled>
+                    </snapshots>
+                </repository>
+            </repositories>
+        </profile>
+    </profiles>
 
 </project>

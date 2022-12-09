@@ -15,7 +15,11 @@ import org.springframework.context.annotation.Configuration;
 public class MitutucuteSpringbootWebApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(MitutucuteSpringbootWebApplication.class, args);
+        try {
+            SpringApplication.run(MitutucuteSpringbootWebApplication.class, args);
+        }catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
 
